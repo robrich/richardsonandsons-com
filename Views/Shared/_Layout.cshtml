@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>@ViewBag.Title</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	<link type="text/css" rel="stylesheet" href="http://yui.yahooapis.com/3.1.1/build/cssreset/reset-min.css" />
+	<link type="text/css" rel="stylesheet" href="/include/site.css" />
+	@RenderSection( "Head", required: false )
+</head>
+<body>
+	<div id="back">
+		<div id="matrix"></div>
+		<div id="horizon"></div>
+	</div>
+	<div id="page">
+		<div id="page2">
+			<header id="logo">
+				<a href="@Url.Action( "Index", "Home" )"><img id="logo_img" src="/img/logo.png" width="128" height="143" alt="Richardson &amp; Sons, LLC" title="Richardson &amp; Sons, LLC" /></a>
+				<div id="logo_title">Richardson &amp; Sons, LLC</div>
+				<div id="logo_tag">enterprise grade software, home town service</div>
+			</header>
+			<nav>
+				<ul id="menu">
+					<li>@Html.ActionLink( "About", "Index", "home", null, new { @class = ViewBag.Selected == "Home" ? "selected" : "" } )</li>
+					<li>@Html.ActionLink( "Profile", "profile", "home", null, new { @class = ViewBag.Selected == "Profile" ? "selected" : "" } )</li>
+					<li>@Html.ActionLink( "Services", "services", "home", null, new { @class = ViewBag.Selected == "Services" ? "selected" : "" } )</li>
+					<li>@Html.ActionLink( "Contact", "contact", "home", null, new { @class = ViewBag.Selected == "Contact" ? "selected" : "" } )</li>
+				</ul>
+			</nav>
+			<div id="content">@RenderBody()<br class="clear"/></div>
+			<footer id="footer">Copyright &copy; Richardson &amp; Sons, LLC</footer>
+		</div>
+	</div>
+	<div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+		<script src="/include/jquery_matrix.js"></script>
+		<script>
+			$(document).ready(function () {
+				if ($(window).width() > 600) {
+					$("#matrix").matrix();
+				}
+			});
+		</script>
+		@RenderSection( "Script", required: false )
+	</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿@{
+	ViewBag.Title = "About Us";
+	ViewBag.Selected = "Home";
+}
+
+<img class="img-left" src="/img/bin2.jpg" width="400" height="337" alt="binary" />
+<section>
+<h1>@ViewBag.Title</h1>
+<p>
+Richardson &amp; Sons, LLC provides custom software services for small- to mid-sized businesses. Richardson &amp; Sons specializes 
+in understanding business needs, selecting technical solutions, and executing specialized software development tailored to meet individual business goals.
+Richardson is a Microsoft Certified Partner.
+</p>
+<img id="ms-partner" src="/img/ms-partner.png" alt="Microsoft Certified Partner Silver ISV" />
+			
+<h2>Ready to talk?</h2>
+<p>@Html.ActionLink("Contact us now", "contact", "home") to begin discussing the needs of your business and how we can assist you meet those needs.</p>
+</section>

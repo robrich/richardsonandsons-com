@@ -1,18 +1,145 @@
 ﻿@{
-	ViewBag.Title = "About Us";
-	ViewBag.Selected = "Home";
+	Layout = null;
 }
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Richardson &amp; Sons, LLC</title>
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Roboto" />
+	<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body class="bottom-bg">
+	<div class="top-bg">
+		<div class="row top-row">
+			<div class="right blue upper">
+				<nav>
+					<a href="#about">About</a>
+					<a href="#profile">Profile</a>
+					<a href="#services">Services</a>
+					<a href="#contact">Contact</a>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="center">
+				<h1><img src="/img/richardson-and-sons-llc.png" alt="Richardson &amp; Sons, LLC" class="logo" /></h1>
+			</div>
+		</div>
 
-<img class="img-left" src="/img/bin2.jpg" width="400" height="337" alt="binary" />
-<section>
-<h1>@ViewBag.Title</h1>
-<p>
-Richardson &amp; Sons, LLC provides custom software services for small- to mid-sized businesses. Richardson &amp; Sons specializes 
-in understanding business needs, selecting technical solutions, and executing specialized software development tailored to meet individual business goals.
-Richardson is a Microsoft Certified Partner.
-</p>
-<img id="ms-partner" src="/img/ms-partner.png" alt="Microsoft Certified Partner Silver ISV" />
-			
-<h2>Ready to talk?</h2>
-<p>@Html.ActionLink("Contact us now", "contact", "home") to begin discussing the needs of your business and how we can assist you meet those needs.</p>
-</section>
+		<div class="rowcontent">
+			<h2 class="upper center-if-big cell" id="about">About</h2>
+			<div class="clearfix">
+				<div class="half">
+					<div class="cell yellow-right-border sm-yellow-left-border">
+						<p>
+							Richardson &amp; Sons, LLC provides custom software services for small to mid-sized businesses.
+							Richardson &amp; Sons specializes in understanding business needs, selecting technical solutions, and executing
+							specialized software development tailored to meet individual business goals. Richardson is a Microsoft
+							Certified Partner.
+						</p>
+					</div>
+					<div class="if-small"><div class="chevron-wrap"><i class="chevron"></i></div></div>
+				</div>
+				<div class="half">
+					<div class="cell">
+						<img src="/img/microsoft-partner.png" alt="Microsoft Partner Independent Software Vendor (ISV)" class="img-full" />
+					</div>
+				</div>
+			</div>
+			<div class="if-big"><div class="chevron-wrap"><i class="chevron"></i></div></div>
+		</div>
+
+		<div class="rowcontent">
+			<div class="clearfix">
+				<div class="third">
+					<div class="cell">
+						<h2 class="upper center-if-big" id="profile">Profile <span class="yellow bigger">&gt;</span></h2>
+						<p class="blue center upper">
+							OUR MISSION:  To provide high-quality, enterprise-grade software and individualized,
+							home town service for small- to medium-sized businesses.
+						</p>
+					</div>
+				</div>
+				<div class="two-thirds">
+					<div class="cell yellow-left-border sm-yellow-left-border">
+						<p>
+							<span class="blue upper bold">Corporate Profile:</span>  Robert Richardson, Principal of Richardson and Sons, LLC has provided software development
+							expertise for over 15 years. Mr. Richardson has created software applications ranging from enterprise-scale
+							applications to mobile systems. Mr. Richardson's clients include public utilities, petroleum distributors, and
+							data visualization designers. Mr. Richardson has attained the degree of Masters of Science in Computer Information
+							Systems (MSCIS), and the degree of Bachelors of Fine Arts in Industrial Design (BFA ID), the study of human
+							factors and human / technology interaction. Richardson and Sons, LLC was founded for the specific purpose of
+							providing custom enterprise software development for small to mid-sized organizations. Several key Richardson
+							assets have Masters Degrees and special certifications in software development and technology implementation and
+							control. Richardson brings to each client a love of software development, a high quality work ethic, and an
+							attitude of excellence in results. With this collaboration and enthusiasm, Richardson can bring to its clients
+							highly successful software development projects that are generally concluded within timeframe and budget.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="two-thirds"><div class="chevron-wrap"><i class="chevron"></i></div></div>
+		</div>
+
+		<div class="clearfix rowcontent">
+			<div class="half">
+				<div class="cell">
+					<h2 class="upper" id="services">Services</h2>
+					<div class="blue upper">
+						<p class="bold">We can help you develop:</p>
+						<ul>
+							<li>Enterprise Applications</li>
+							<li>Your business's first website</li>
+							<li>E-commerce & order tracking</li>
+							<li>Business process automation</li>
+							<li>Revitalize & refresh your existing site</li>
+							<li>Search Engine Optimization</li>
+							<li>Developer training</li>
+						</ul>
+						<br />
+					</div>
+				</div>
+			</div>
+
+			<div class="half">
+				<div class="cell">
+					<h2 class="upper" id="contact">Contact</h2>
+					<p class="blue upper bold">Ready to talk?</p>
+					<p>Contact us today to begin discussing the needs of your business and how we can assist you meet those needs.</p>
+					<p>&nbsp;</p>
+					<p>
+						<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#111;&#98;&#114;&#105;&#99;&#104;&#64;&#114;&#105;&#99;&#104;&#97;&#114;&#100;&#115;&#111;&#110;&#97;&#110;&#100;&#115;&#111;&#110;&#115;&#46;&#99;&#111;&#109;">
+							<span class="upper bold">email:</span> &#114;&#111;&#098;&#114;&#105;&#099;&#104;&#064;&#114;&#105;&#099;&#104;&#097;&#114;&#100;&#115;&#111;&#110;&#097;&#110;&#100;&#115;&#111;&#110;&#115;&#046;&#099;&#111;&#109;
+						</a>  <span class="yellow big sub">&gt;</span>
+					</p>
+					<p><a href="tel://4805599579"><span class="upper bold">phone:</span> (480) 559-9579 <span class="yellow big sub">&gt;</span></a></p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="blue-bg">
+		<div class="row bottom-row clearfix white upper">
+			<div class="right">@DateTime.Now.Year &copy; Richardson &amp; Sons, LLC</div>
+			<nav class="if-big">
+				<a href="#about">About</a>
+				<a href="#profile">Profile</a>
+				<a href="#services">Services</a>
+				<a href="#contact">Contact</a>
+			</nav>
+		</div>
+	</div>
+	<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-89446675-1', 'auto');
+ga('send', 'pageview');
+	</script>
+</body>
+</html>

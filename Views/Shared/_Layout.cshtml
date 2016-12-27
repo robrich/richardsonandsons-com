@@ -1,54 +1,57 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]> <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]> <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>@ViewBag.Title</title>
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
-	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Richardson &amp; Sons, LLC</title>
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-	<link type="text/css" rel="stylesheet" href="//yui.yahooapis.com/3.1.1/build/cssreset/reset-min.css" />
-	<link type="text/css" rel="stylesheet" href="/include/site.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Roboto" />
+	<link rel="stylesheet" href="/css/style.css" />
 	@RenderSection( "Head", required: false )
 </head>
-<body>
-	<div id="back">
-		<div id="matrix"></div>
-		<div id="horizon"></div>
-	</div>
-	<div id="page">
-		<div id="page2">
-			<header id="logo">
-				<a href="@Url.Action( "Index", "Home" )"><img id="logo_img" src="/img/logo.png" width="128" height="143" alt="Richardson &amp; Sons, LLC" title="Richardson &amp; Sons, LLC" /></a>
-				<div id="logo_title">Richardson &amp; Sons, LLC</div>
-				<div id="logo_tag">enterprise grade software, home town service</div>
-			</header>
-			<nav>
-				<ul id="menu">
-					<li>@Html.ActionLink( "About", "Index", "home", null, new { @class = ViewBag.Selected == "Home" ? "selected" : "" } )</li>
-					<li>@Html.ActionLink( "Profile", "profile", "home", null, new { @class = ViewBag.Selected == "Profile" ? "selected" : "" } )</li>
-					<li>@Html.ActionLink( "Services", "services", "home", null, new { @class = ViewBag.Selected == "Services" ? "selected" : "" } )</li>
-					<li>@Html.ActionLink( "Contact", "contact", "home", null, new { @class = ViewBag.Selected == "Contact" ? "selected" : "" } )</li>
-				</ul>
-			</nav>
-			<div id="content">@RenderBody()<br class="clear"/></div>
-			<footer id="footer">Copyright &copy; Richardson &amp; Sons, LLC</footer>
+<body class="bottom-bg">
+	<div class="top-bg">
+		<div class="row top-row">
+			<div class="right blue upper">
+				<nav>
+					<a href="/#about">About</a>
+					<a href="/#profile">Profile</a>
+					<a href="/#services">Services</a>
+					<a href="/#contact">Contact</a>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="center">
+				<h1><img src="/img/richardson-and-sons-llc.png" alt="Richardson &amp; Sons, LLC" class="logo" /></h1>
+			</div>
+		</div>
+
+		<div class="row">
+			@RenderBody()
 		</div>
 	</div>
-	<div>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
-		<script src="/include/jquery_matrix.js"></script>
-		<script>
-			$(document).ready(function () {
-				if ($(window).width() > 600) {
-					$("#matrix").matrix();
-				}
-			});
-		</script>
-		@RenderSection( "Script", required: false )
+
+	<div class="blue-bg">
+		<div class="row bottom-row clearfix white upper">
+			<div class="right">@DateTime.Now.Year &copy; Richardson &amp; Sons, LLC</div>
+			<nav class="if-big">
+				<a href="#about">About</a>
+				<a href="#profile">Profile</a>
+				<a href="#services">Services</a>
+				<a href="#contact">Contact</a>
+			</nav>
+		</div>
 	</div>
+	@RenderSection("Script", required: false)
+	<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-89446675-1', 'auto');
+ga('send', 'pageview');
+	</script>
 </body>
 </html>
